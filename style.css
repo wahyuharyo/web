@@ -7,6 +7,150 @@ body {
   font-family: "Jost", Arial, Helvetica, sans-serif;
 }
 
+/* HEADER */
+
+header {
+  width: 100%;
+  position: fixed;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 2;
+  background-color: white;
+}
+
+.logo {
+  position: absolute;
+  top: 17px;
+  left: 75px;
+}
+
+nav {
+  left: 50%;
+}
+
+nav ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+nav ul li{
+  list-style-type: none;
+}
+
+/* CONTENT */
+
+main {
+  max-width: 1920px;
+  margin: auto;
+  padding-top: 75px;
+}
+
+.carousel-wrapper {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.carousel img {
+  flex: 1 0 100%;
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+.carousel-nav {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 1.25rem;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.carousel-nav a {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 100%;
+  background-color: black;
+  opacity: 0.10;
+}
+
+.carousel-nav a:hover {
+  opacity: 0.5;
+}
+
+.carousel-nav a:target {
+  background-color: red;
+  opacity: 0.75;
+}
+
+.programmes {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  gap: 50px;
+  text-align: center;
+}
+
+.programmes-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #002256;
+  color: white;
+  font-size: larger;
+}
+
+.services-content {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 40%;
+  gap: 75px;
+  margin: 75px 0 75px 0;
+}
+
+.services-content-details {
+  width: 80%;
+  text-align: center;
+}
+
+.services-content-details h1 {
+  margin-bottom: 40px;
+}
+
+.services-content-details ul li {
+  text-align: left;
+  margin: 20px 0 20px 0;
+}
+
+.services-content-details-record {
+  display: flex;
+}
+
+.services-image img{
+  width: 80%;
+}
+
 .h1 {
   padding: 2rem;
   text-align: center;
@@ -132,4 +276,20 @@ color: #0e2256;
   justify-content: center;
   background: #000;
   color: rgba(255,255,255,.6);
+}
+
+@media only screen and (max-width: 1024px) {
+  header {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .logo {
+      display: block;
+      position: static;
+  }
+
+  .logo h1 {
+      text-align: center;
+  }
 }
